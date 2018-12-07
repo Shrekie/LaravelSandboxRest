@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/test', function () {
+
+    $test = array(
+        "dette er fra laravel over wifi LAN" => "heisann",
+        "bar" => "foo",
+    );
+
+    return $test;
+
+});
