@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/test', function () {
+
+    $test = array(
+        "dette er fra laravel over wifi LAN" => "heisann",
+        "bar" => "foo",
+    );
+
+    return $test;
+
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

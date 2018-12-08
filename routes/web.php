@@ -15,14 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/manager', function () {
+    return view('ouath-manager');
+})->middleware('auth');
 
-Route::get('/test', function () {
+Auth::routes();
 
-    $test = array(
-        "dette er fra laravel over wifi LAN" => "heisann",
-        "bar" => "foo",
-    );
-
-    return $test;
-
-});
+Route::get('/home', 'HomeController@index')->name('home');
