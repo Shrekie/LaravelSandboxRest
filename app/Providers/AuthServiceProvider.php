@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::routes(
             function ($router) {
-                // OAuth only for a token authorization
+                // OAuth only client authorization
                 $router->forAuthorization();
                 $router->forAccessTokens();
                 $router->forTransientTokens();
