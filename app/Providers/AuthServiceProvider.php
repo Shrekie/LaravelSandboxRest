@@ -32,6 +32,7 @@ class AuthServiceProvider extends ServiceProvider
                 $router->forAuthorization();
                 $router->forAccessTokens();
                 $router->forTransientTokens();
+                //$router->forClients()->middleware('scope:manage-clients')
             }
         );
 
