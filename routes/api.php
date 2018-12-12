@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/test', function () {
+Route::get('test', function () {
 
     $test = array(
         "dette er fra laravel over wifi LAN" => "heisann",
@@ -23,6 +23,8 @@ Route::get('/test', function () {
     return $test;
 
 });
+
+Route::post('register', 'Auth\RegisterController@register');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
